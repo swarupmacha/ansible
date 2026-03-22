@@ -1,0 +1,16 @@
+---
+- name: "pritn usrname and password"
+  hosts: all
+  connection: local
+  vars_prompt:
+  - name: "username"
+    prompt: "Enter your username"
+    private: flase
+  - name: password
+    prompt: "Enter the password"
+    private: true
+
+  tasks:
+  - name: "printing user details"
+    debug:
+      msg: "hello {{ username }} and your password is {{ password }}"
