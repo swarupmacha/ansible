@@ -2,6 +2,7 @@
 - name: " demo on error handling"
   hosts: all
   connection: local
+  become: yes
   tasks:
     - name: "checking user exists or not"
       command: id swarup
@@ -11,3 +12,7 @@
     - name: "printing the result"
       debug:
         msg: "{{ result.stdout }}"
+    
+    - name: "create user"
+      command: useradd swarup
+      when: result.rc != 0
