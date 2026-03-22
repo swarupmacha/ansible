@@ -8,10 +8,12 @@
     register: useroutput
   - name: "printing the output"
     debug:
-      msg: "{{ useroutput }}"
+      msg: "{{ useroutput.stdout }}"
   - name: "checking shell module"
-    shell: ls -ltr > files.txt
+    shell: ls -ltr > files
+    regsiter: files.txt
+  - name: "printing the output"
     debug:
-      msg: "the file is created here is the output {{ files.txt }}"
+      msg: "the file is created here is the output {{ files.txt.stdout }}"
   
   
