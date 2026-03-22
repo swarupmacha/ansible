@@ -1,7 +1,7 @@
 ---
 - name: "checking datatypes"
   hosts: all
-  connection : all
+  connection: local
   vars: 
     IS_LIVE: true
   tasks:
