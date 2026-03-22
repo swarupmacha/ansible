@@ -11,9 +11,9 @@
       msg: "{{ useroutput.stdout }}"
   - name: "checking shell module"
     shell: ls -ltr > files
-    regsiter: files.txt
+    register: lsoutput
   - name: "printing the output"
     debug:
-      msg: "the file is created here is the output {{ files.txt.stdout }}"
+      msg: "the file is created here is the output {{ lsoutput.rc }}"
   
   
