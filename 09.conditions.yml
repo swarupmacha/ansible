@@ -1,0 +1,11 @@
+---
+- name: "checking datatypes"
+  hosts: all
+  connection : all
+  vars: 
+    IS_LIVE: true
+  tasks:
+    - name: " if it is live or not"
+      debug:
+        msg: "the server is live"
+      when: IS_LIVE == true  
