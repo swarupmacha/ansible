@@ -1,0 +1,24 @@
+---
+- name: "datatypoes"
+  hosts: all
+  connection: local
+  vars:
+    PROGRAM: "Ansible"
+    VERSION: 2.14
+    Is_OPEN_SOURCE: true
+    FEATURES: ["configuration management", "application deployment", "orchestration", "provisioning"]
+    DETAILS:
+      maintainer: "Red Hat"
+      license: "GPLv3"
+      website: "https://www.ansible.com/" 
+  tasks:
+  - name: "printing the details"
+    debug:
+      msg: |
+        Program: {{ PROGRAM }}
+        Version: {{ VERSION }}
+        Open Source: {{ Is_OPEN_SOURCE }}
+        Features: {{ FEATURES }}
+        Maintainer: {{ DETAILS.maintainer }}
+        License: {{ DETAILS.license }}
+        Website: {{ DETAILS.website }}
