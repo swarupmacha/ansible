@@ -1,4 +1,6 @@
 ---
 - name: "ping Sever"
   hosts: all
-  
+  tasks:
+  - name: "pinging the server"
+    ping:
