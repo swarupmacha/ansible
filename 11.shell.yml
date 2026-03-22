@@ -1,0 +1,17 @@
+---
+- name: "Difference bewteen shell and command moduele"
+  hosts: all
+  connection: local
+  tasks:
+  - name: "checking shell module"
+    shell: cat /etc/passwd | grep root
+    register: useroutput
+  - name: "printing the output"
+    debug:
+      msg: "{{ useroutput }}"
+  - name: "checking shell module"
+    shell: ls -ltr > files.txt
+    debug:
+      msg: "the file is created here is the output {{ files.txt }}"
+  
+  
