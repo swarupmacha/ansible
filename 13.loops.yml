@@ -1,0 +1,10 @@
+---
+- name: "installing packages with loops"
+  hosts: all
+  become: yes
+  tasks:
+    - name: "installing packages"
+      yum: name: "{{ item }} state: present"
+      loop:
+        - nginx
+        - httpd
