@@ -1,0 +1,13 @@
+---
+- name: " demo on error handling"
+  hosts: all
+  connection: local
+  tasks:
+    - name: "checking user exists or not"
+      command: id swarup
+      register: result
+      ignore_errors: yes
+    
+    - name: "printing the result"
+      debug:
+        msg: "{{ result.stdout }}"
