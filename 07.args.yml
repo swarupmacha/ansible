@@ -1,6 +1,6 @@
 ---
 - name: " checking arusgments from command line"
-  hostss: all
+  hosts: all
   connection: local
   tasks:
   - name: "checking name"
