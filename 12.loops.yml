@@ -6,7 +6,7 @@
   - name: "checking this names"
     debug:
       msg: "hello {{ item}}"
-      loop:
-        - swarup
-        - kumar
-        - macha
+    loop:
+      - swarup
+      - kumar
+      - macha
