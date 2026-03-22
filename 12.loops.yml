@@ -1,0 +1,12 @@
+--- 
+- name: "checking on lopps"
+  hosts: all
+  connection : local
+  tasks:
+  - name: "checking this names"
+    debug:
+      msg: "hello {{ item}}"
+      loop:
+        - swarup
+        - kumar
+        - macha
