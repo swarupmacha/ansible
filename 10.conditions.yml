@@ -1,0 +1,11 @@
+---
+- name: "checking the confitions"
+  hosts: all
+  connection: local
+  vars:
+    NUMBER: 11
+  tasks:
+  - name: "checking the number is geretare than 10 cllasess or not"
+    debug:
+      msg: "the number is feratre than 10"
+    when: NUMBER > 10
