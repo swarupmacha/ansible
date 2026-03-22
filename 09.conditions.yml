@@ -9,7 +9,6 @@
       debug:
         msg: "the server is live"
       when: IS_LIVE == true  
-  tasks:
     - name: "printing facts"
       debug:
         msg: "{{ ansible_facts }}"
