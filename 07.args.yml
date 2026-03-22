@@ -1,0 +1,8 @@
+---
+- name: " checking arusgments from command line"
+  hostss: all
+  connection: local
+  tasks:
+  - name: "checking name"
+    debug:
+      msg: "helleo my name is {{ Name }} "
