@@ -2,10 +2,8 @@
 - name: "playing iwth vars"
   hosts: all
   connection: local
-  vars:
-    NAME: "Swarup"
-    Age: 23
-    JOB: "DevOps Engineer"
+  vars_files:
+    - Details.yml
   tasks:
   - name: "printing the message"
     vars:
