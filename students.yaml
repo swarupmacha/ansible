@@ -1,0 +1,23 @@
+- name: "Swarup"
+  dob: "18-01-2002"
+  mobilenumber: 1234567
+  addresses:
+  - FlatNumber: 108
+    street: "Ram Nagar"
+    city: hyderbad
+  - FlatNumber: 108
+    street: "Ram Nagar"
+    city: Bangalore
+
+- name: "Kumar"
+  dob: "16-10-2002"
+  mobilenumber: 1234567
+  addresses:
+  - FlatNumber: 108
+    street: "Ram Nagar"
+    city: hyderbad
+  - FlatNumber: 108
+    street: "Ram Nagar"
+    city: Bangalore
+
+  
