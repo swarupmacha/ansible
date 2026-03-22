@@ -1,0 +1,12 @@
+---
+- name: "playing iwth vars"
+  hosts: all
+  connection: local
+  vars:
+    NAME: "Swarup"
+    Age: 23
+    JOB: "DevOps Engineer"
+  tasks:
+  - name: "printing the message"
+    debug:
+      msg:  "My name is {{ NAME }} and I am {{ Age }} years old and I am working as a {{ JOB }}"
